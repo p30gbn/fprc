@@ -32,6 +32,7 @@ const term = ((command)=>{
 
 
 
+
 const main = (async () => {
     let links = await fs.readFile(resolve(__dirname, 'links.txt'),{encoding: 'utf8'});
     links = links.split(/\n/);
