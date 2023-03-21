@@ -33,12 +33,8 @@ const term = ((command)=>{
 
 
 const main = (async () => {
-    // let links = await fs.readFile(resolve(__dirname, 'links.txt'),{encoding: 'utf8'});
-    // links = links.split(/\n/);
-    links = [
-      "https://dl.mahanmusic.net/ahang/01/12/MasihAndArashh%20-%20TooMaramamNist%20-%20128%20-%20mahanmusic.net.mp3",
-      "https://cdn-media-1.freecodecamp.org/images/1*I56pPhzO1VQw8SIsv8wYNA.png",
-    ];
+    let links = await fs.readFile(resolve(__dirname, 'links.txt'),{encoding: 'utf8'});
+    links = links.split(/\n/);
     term("docker container start aria2-ui");
     links.forEach((link)=>{
         (async()=>{
